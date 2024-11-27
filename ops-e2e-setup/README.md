@@ -1,21 +1,3 @@
-## Directory Structure
-
-ops-e2e-setup/
-├── docker-compose.yml
-├── scripts/
-│   ├── update_agent.sh
-├── prometheus/
-│   ├── prometheus.yml
-├── grafana/
-│   └── provisioning/
-│       ├── datasources/
-│       │   └── datasource.yml
-│       └── dashboards/
-│           └── dashboard.json
-├── README.md
-
----
-
 ## Installation
 
 1. **Clone the Repository**
@@ -24,16 +6,14 @@ ops-e2e-setup/
    cd Rolling-updates
    ```
 
-2.	Set Up Monitoring: Start Prometheus and Grafana
-
+2.	Set Up Monitoring: Start Prometheus and Grafan
     ```bash
     docker-compose up -d
     ```
 
-
 	- Access Grafana at http://localhost:3000 (default user: admin, password: admin).
 
-	3.	Deploy Update Agent:
+3.	Deploy Update Agent:
 	- Place update_agent.sh on each node.
 	- Make it executable:
 
@@ -41,7 +21,7 @@ ops-e2e-setup/
     chmod +x scripts/update_agent.sh
     ```
 
-	4.	Automate Updates:
+4.	Automate Updates:
 	- Schedule update_agent.sh to run periodically using cron or another task scheduler.
 	- Run Update Script:
     ```bash
@@ -51,9 +31,9 @@ ops-e2e-setup/
 	- Access Prometheus: http://localhost:9090
 	- Access Grafana: http://localhost:3000
 
-    5. Rollback: If an update fails then the update script automatically pulls the stable image and restarts the node.
+5. Rollback: If an update fails then the update script automatically pulls the stable image and restarts the node.
 
-    6. Security:
+6. Security:
     - Docker Content Trust: Verify image integrity using SHA256.
 	- Access Control: Use SSH and firewalls to secure nodes.
 ---

@@ -16,12 +16,12 @@ monitoring and rollback mechanisms.
 
 ### High-Level Diagram
 ```plaintext
-                         +-------------------------+
-                         |     Control Plane       |
-                         |  - Update Scheduler     |
-                         |  - Batch Coordinator    |
-                         |  - Monitoring Manager   |
-                         +-------------------------+
+                          +-------------------------+
+                          |     Control Plane       |
+                          |  - Update Scheduler     |
+                          |  - Batch Coordinator    |
+                          |  - Monitoring Manager   |
+                          +-------------------------+
                                       |
                           Orchestrates Rolling Updates
                                       |
