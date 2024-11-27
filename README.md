@@ -1,6 +1,5 @@
 # Automated Rolling Update Architecture for Node Operators
 
-## Overview
 This architecture enables automated rolling updates for globally distributed node operators running
 Docker and Docker Compose. It ensures high availability, minimizes downtime, and provides robust
 monitoring and rollback mechanisms.
