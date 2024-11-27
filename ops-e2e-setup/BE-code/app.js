@@ -1,1 +1,1 @@
-print(BE-code)
+console.log('BE-code');
