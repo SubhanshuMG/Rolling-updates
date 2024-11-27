@@ -17,19 +17,21 @@
 	- Place update_agent.sh on each node.
 	- Make it executable:
 
-    ```bash
-    chmod +x scripts/update_agent.sh
-    ```
+      ```bash
+      chmod +x scripts/update_agent.sh
+      ```
 
 4.	Automate Updates:
 	- Schedule update_agent.sh to run periodically using cron or another task scheduler.
 	- Run Update Script:
-    ```bash
-    ./scripts/update_agent.sh
-    ```    
+
+      ```bash
+      ./scripts/update_agent.sh
+      ```    
+
 	- Monitor Metrics:
-	- Access Prometheus: http://localhost:9090
-	- Access Grafana: http://localhost:3000
+	    - Access Prometheus: http://localhost:9090
+	    - Access Grafana: http://localhost:3000
 
 5. Rollback: If an update fails then the update script automatically pulls the stable image and restarts the node.
 
