@@ -1,4 +1,3 @@
-Automated Rolling Update Architecture for Node Operators
 # Automated Rolling Update Architecture for Node Operators
 
 ## Overview
@@ -17,33 +16,33 @@ monitoring and rollback mechanisms.
 
 ### High-Level Diagram
 ```plaintext
-                       +-------------------------+
-                       |     Control Plane       |
-                       |  - Update Scheduler     |
-                       |  - Batch Coordinator    |
-                       |  - Monitoring Manager   |
-                       +-------------------------+
-                                    |
-                       Orchestrates Rolling Updates
-                                    |
-       +----------------------------+------------------------+
-       |                            |                        |
-  +------------+             +------------+            +------------+
-  | Node Group |             | Node Group |            | Node Group |
-  | Region A   |             | Region B   |            | Region C   |
-  +------------+             +------------+            +------------+
-        |                           |                        |
-+-----------------+       +-----------------+       +-----------------+
-| Node Operator 1 |       | Node Operator 1 |       | Node Operator 1 |
-| - Update Agent  |       | - Update Agent  |       | - Update Agent  |
-+-----------------+       +-----------------+       +-----------------+
-   |                               |                         |
-+-----------------+       +-----------------+       +-----------------+
-| Node Operator 2 |       | Node Operator 2 |       | Node Operator 2 |
-| - Update Agent  |       | - Update Agent  |       | - Update Agent  |
-+-----------------+       +-----------------+       +-----------------+
+                         +-------------------------+
+                         |     Control Plane       |
+                         |  - Update Scheduler     |
+                         |  - Batch Coordinator    |
+                         |  - Monitoring Manager   |
+                         +-------------------------+
+                                      |
+                          Orchestrates Rolling Updates
+                                      |
+           +--------------------------+------------------------+
+           |                          |                        |
+    +------------+             +------------+            +------------+
+    | Node Group |             | Node Group |            | Node Group |
+    | Region A   |             | Region B   |            | Region C   |
+    +------------+             +------------+            +------------+
+           |                          |                        |
+  +-----------------+        +-----------------+       +-----------------+
+  | Node Operator 1 |        | Node Operator 1 |       | Node Operator 1 |
+  | - Update Agent  |        | - Update Agent  |       | - Update Agent  |
+  +-----------------+        +-----------------+       +-----------------+
+           |                          |                         |
+  +-----------------+        +-----------------+       +-----------------+
+  | Node Operator 2 |        | Node Operator 2 |       | Node Operator 2 |
+  | - Update Agent  |        | - Update Agent  |       | - Update Agent  |
+  +-----------------+        +-----------------+       +-----------------+
 
-  Load Balancer (Optional for traffic routing across active nodes)
+     Load Balancer (Optional for traffic routing across active nodes)
 ```
 ---
 
