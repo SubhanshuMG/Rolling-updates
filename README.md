@@ -5,11 +5,7 @@ This architecture enables automated rolling updates for globally distributed nod
 Docker and Docker Compose. It ensures high availability, minimizes downtime, and provides robust
 monitoring and rollback mechanisms.
 
-## Objectives
-- Automate Docker image detection and update deployment.
-- Implement rolling updates by updating nodes in manageable batches.
-- Monitor updates for success and trigger rollbacks if necessary.
-- Provide a scalable solution for global operations.
+Note: In this repo I have added the architecture including the sample CICD with setup instructions inside the `ops-e2e-setup` folder
 ---
 
 ## Architecture Design
